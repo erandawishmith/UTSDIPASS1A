@@ -15,4 +15,11 @@ public class Technician extends Record {
         return str;
     }
 
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
+
 }

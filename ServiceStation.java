@@ -16,14 +16,29 @@ public class ServiceStation {
     private void menu() {
         char action = readAction();
         switch (action) {
-            case 'S':addService();break;
-            case 'T':addTechnician();break;
-            case 'E':edit();break;
-            case 'R':report();break;
-            case 'X':exit();break;
-            case '?':help();break;
-            case 'D':delete();break;
-            default:error();
+            case 'S':
+                addService();
+                break;
+            case 'T':
+                addTechnician();
+                break;
+            case 'E':
+                edit();
+                break;
+            case 'R':
+                report();
+                break;
+            case 'X':
+                exit();
+                break;
+            case '?':
+                help();
+                break;
+            case 'D':
+                delete();
+                break;
+            default:
+                error();
         }
     }
 
@@ -32,13 +47,12 @@ public class ServiceStation {
         return In.nextUpperChar();
     }
 
-
-    private void addService() {
+    public void addService() {
         servicesList.add();
         menu();
     }
 
-    private void addTechnician() {
+    public void addTechnician() {
         techniciansList.add();
         menu();
     }
@@ -50,20 +64,23 @@ public class ServiceStation {
         return In.nextUpperChar();
     }
 
-
     private void edit() {
         switch (editAction()) {
-            case 'S':editService();break;
-            case 'T':editTechnician();break;
+            case 'S':
+                editService();
+                break;
+            case 'T':
+                editTechnician();
+                break;
         }
     }
 
-    private void editService() {
+    public void editService() {
         servicesList.edit();
-                menu();
+        menu();
     }
 
-    private void editTechnician() {
+    public void editTechnician() {
         techniciansList.edit();
         menu();
     }
@@ -77,8 +94,12 @@ public class ServiceStation {
 
     private void delete() {
         switch (readDeleteAction()) {
-            case 'S':deleteService(); break;
-            case 'T':deleteTechnician();break;
+            case 'S':
+                deleteService();
+                break;
+            case 'T':
+                deleteTechnician();
+                break;
         }
     }
 
@@ -101,7 +122,9 @@ public class ServiceStation {
 
     private void report() {
         switch (readReportAction()) {
-            case 'S':servicesList.show();break;
+            case 'S':
+                servicesList.show();
+                break;
             case 'T':
                 techniciansList.show();
         }
