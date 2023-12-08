@@ -7,6 +7,10 @@ public class Service extends Record {
     private ServiceType serviceType;
     private Status status;
 
+    public int getId() {
+        return id;
+    }
+
     public Service(int id, String name, String model, String date, ServiceType serviceType, Status status) {
         super(id, name);
         this.model = model;

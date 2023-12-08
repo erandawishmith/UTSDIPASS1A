@@ -46,6 +46,13 @@ public class Services extends Records {
         deleteService(id);
     }
 
+    public void addServiceAutomatically(String customerName, String vehicleModel, String date, ServiceType serviceType, Status status) {
+        System.out.println("Adding Service Automatically...");
+        Service service = new Service(++id, customerName, vehicleModel, date, serviceType, status);
+        super.add(service);
+        System.out.println(service.toString() + " 'Service Added Automatically !' ");
+    }
+
     private ServiceType getServiceTypeFromUser() {
         System.out.println("Choose service type:");
         for (ServiceType type : ServiceType.values()) {

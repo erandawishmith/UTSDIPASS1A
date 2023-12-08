@@ -13,7 +13,7 @@ public class ServiceStation {
         new ServiceStation();
     }
 
-    private void menu() {
+    public void menu() {
         char action = readAction();
         switch (action) {
             case 'S':
@@ -155,6 +155,12 @@ public class ServiceStation {
 
     private void error() {
         System.out.println("No action found. Try again");
+        menu();
+    }
+
+    public void addServiceAutomatically(String customerName, String vehicleModel, String date, ServiceType serviceType, Status status) {
+        System.out.println("Adding Service Automatically...");
+        servicesList.addServiceAutomatically(customerName, vehicleModel, date, serviceType, status);
         menu();
     }
 }
