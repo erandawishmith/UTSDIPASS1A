@@ -47,12 +47,12 @@ public class ServiceStation {
         return In.nextUpperChar();
     }
 
-    public void addService() {
+    private void addService() {
         servicesList.add();
         menu();
     }
 
-    public void addTechnician() {
+    private void addTechnician() {
         techniciansList.add();
         menu();
     }
@@ -75,12 +75,12 @@ public class ServiceStation {
         }
     }
 
-    public void editService() {
+    private void editService() {
         servicesList.edit();
         menu();
     }
 
-    public void editTechnician() {
+    private void editTechnician() {
         techniciansList.edit();
         menu();
     }
