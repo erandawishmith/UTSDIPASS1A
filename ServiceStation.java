@@ -17,7 +17,7 @@ public class ServiceStation {
         char action = readAction();
         switch (action) {
             case 'S':addService();break;
-            case 'T':addTechnician(technician);break;
+            case 'T':addTechnician();break;
             case 'E':edit();break;
             case 'R':report();break;
             case 'X':exit();break;
@@ -38,7 +38,7 @@ public class ServiceStation {
         menu();
     }
 
-    private void addTechnician(Technician technician) {
+    private void addTechnician() {
         techniciansList.add();
         menu();
     }
@@ -57,7 +57,6 @@ public class ServiceStation {
             case 'T':editTechnician();break;
         }
     }
-
 
     private void editService() {
         servicesList.edit();
@@ -93,7 +92,6 @@ public class ServiceStation {
         menu();
     }
 
-    //    char action = readAction();
     private char readReportAction() {
         System.out.println("Please enter your choice (S,T): ");
         System.out.println("S:Service");
@@ -137,6 +135,3 @@ public class ServiceStation {
         menu();
     }
 }
-
-
-
