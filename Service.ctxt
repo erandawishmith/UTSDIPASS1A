@@ -1,7 +1,0 @@
-#BlueJ class context
-comment0.target=Service
-comment1.params=id\ name\ model\ date\ serviceType\ status
-comment1.target=Service(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ ServiceType,\ Status)
-comment2.params=
-comment2.target=java.lang.String\ toString()
-numComments=3
