@@ -7,6 +7,10 @@ public class Service extends Record {
     private ServiceType serviceType;
     private Status status;
 
+    public int getId() {
+        return id;
+    }
+
     public Service(int id, String name, String model, String date, ServiceType serviceType, Status status) {
         super(id, name);
         this.model = model;
@@ -15,7 +19,6 @@ public class Service extends Record {
         this.status = status;
     }
 
-
     @Override
     public String toString() {
         String str = super.toString() + " " + model + " " + date + " " + serviceType + " " + status;
@@ -23,5 +26,20 @@ public class Service extends Record {
         return str;
     }
 
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setServiceType(ServiceType serviceType) {
+        this.serviceType = serviceType;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
 }

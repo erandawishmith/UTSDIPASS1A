@@ -9,7 +9,7 @@ public class Technicians extends Records {
         Technician technician = new Technician(++id,
                 In.readName("Technician Name"),
                 In.readName("Technician Contact Number"),
-                In.readName("Technician Level (Intern, Experienced"));
+                In.readName("Technician Level (Intern, Experienced)"));
         super.add(technician);
         System.out.println(technician.toString() + "'Technician Details Added Successfully !'");
     }
@@ -25,7 +25,7 @@ public class Technicians extends Records {
             Technician newTechnician = new Technician(id,
                     In.readName("Technician Name"),
                     In.readName("Technician Contact Number"),
-                    In.readName("Technician Level (Intern, Experienced"));
+                    In.readName("Technician Level (Intern, Experienced)"));
 
             Technician updatedTechnician = updateTechnician(id - 1, newTechnician);
             System.out.println("Technician Details Updated successfully");
@@ -42,7 +42,7 @@ public class Technicians extends Records {
 
     @Override
     public String toString() {
-        return "test\n" + super.toString();
+        return "\n" + super.toString();
     }
 
     public void deleteTechnician(int id) {
